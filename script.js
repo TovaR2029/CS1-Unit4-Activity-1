@@ -44,3 +44,18 @@ function toggleMode(){
 
 // Attach function to the actual button
 toggleBtn.addEventListener("click", toggleMode);
+
+//REVIEW: Making a button interactive
+// 1. Select HTML elements for JS to target
+const image = document.querySelector("#image");
+const hackerBtn = document.querySelector("#hacker");
+// 2. Attach a function to the button that triggers when clicked
+hackerBtn.addEventListener("click", setHacker);
+// 3. Define the function
+function setHacker() {
+    body.style.background = "black";
+    body.style.fontFamily = "monospace";
+    description.style.color = "rgb(235, 123, 162)";
+    description.textContent = "YOU HAVE BEEN HACKED :(";
+    image.src = "hacker.png";
+}
