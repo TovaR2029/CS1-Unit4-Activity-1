@@ -27,8 +27,9 @@ function toggleMode(){
     if (darkMode == true) {
         console.log("apply dark styles");
         body.style.background = "black";
-        heading.style.color = "violet";
+        heading.style.color = "rgb(103, 32, 90)";
         description.style.color = "white";
+        heading.textContent = "Dark Mode 🖤";
         description.textContent = "Welcome to the dark side! 😈";
         toggleBtn.textContent = "Switch to light";
         image.src = "blackfire.png";
@@ -36,8 +37,9 @@ function toggleMode(){
     else {
         console.log("apply light styles");
         body.style.background = "white";
-         heading.style.color = "pink";
+         heading.style.color = "rgb(239, 207, 230)";
         description.style.color = "black";
+        heading.textContent = "Light Mode ✨";
         description.textContent = "Welcome to the light side! 👼";
         toggleBtn.textContent = "Switch to dark";
         image.src = "starfire.png";
@@ -61,7 +63,8 @@ function setHacker() {
     description.textContent = "YOU HAVE BEEN HACKED :(";
     image.src= "hacker.png";
     image.width= "350";
-    heading.textContent= "MUHAHAHA";
+    heading.textContent= "MUHAHAHA 👾";
+    heading.style.color = "rgb(78, 15, 110)";
 }
 
 const button = document.querySelector('#switch');
