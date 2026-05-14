@@ -31,6 +31,7 @@ function toggleMode(){
         description.style.color = "white";
         description.textContent = "Welcome to the dark side! 😈";
         toggleBtn.textContent = "Switch to light";
+        image.src = "blackfire.png";
     }
     else {
         console.log("apply light styles");
@@ -39,6 +40,7 @@ function toggleMode(){
         description.style.color = "black";
         description.textContent = "Welcome to the light side! 👼";
         toggleBtn.textContent = "Switch to dark";
+        image.src = "starfire.png";
     }
 }
 
@@ -48,7 +50,7 @@ toggleBtn.addEventListener("click", toggleMode);
 //REVIEW: Making a button interactive
 // 1. Select HTML elements for JS to target
 const image = document.querySelector("#image");
-const hackerBtn = document.querySelector("#hacker");
+const hackerBtn = document.querySelector(".hacker");
 // 2. Attach a function to the button that triggers when clicked
 hackerBtn.addEventListener("click", setHacker);
 // 3. Define the function
@@ -57,5 +59,26 @@ function setHacker() {
     body.style.fontFamily = "monospace";
     description.style.color = "rgb(235, 123, 162)";
     description.textContent = "YOU HAVE BEEN HACKED :(";
-    image.src = "hacker.png";
+    image.src= "hacker.png";
+    image.width= "350";
+    heading.textContent= "MUHAHAHA";
 }
+
+const button = document.querySelector('#switch');
+const pic = document.querySelector('#picture');
+
+button.addEventListener('click', switchImage);
+
+let toggle = true;
+
+function switchImage() {
+    toggle = !toggle;
+    if(toggle == true) {
+        pic.src = 'starfire.png';
+    }
+    else { 
+        pic.src = 'blackfire.png';
+    }
+}
+
+
