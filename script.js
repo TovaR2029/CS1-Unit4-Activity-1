@@ -33,6 +33,7 @@ function toggleMode(){
         description.textContent = "Welcome to the dark side! 😈";
         toggleBtn.textContent = "Switch to light";
         image.src = "blackfire.png";
+        emoji.classList.remove("animated");
     }
     else {
         console.log("apply light styles");
@@ -43,6 +44,7 @@ function toggleMode(){
         description.textContent = "Welcome to the light side! 👼";
         toggleBtn.textContent = "Switch to dark";
         image.src = "starfire.png";
+        emoji.classList.remove("animated");
     }
 }
 
@@ -65,6 +67,7 @@ function setHacker() {
     image.width= "350";
     heading.textContent= "MUHAHAHA 👾";
     heading.style.color = "rgb(78, 15, 110)";
+    emoji.classList.add("animated");
 }
 
 const button = document.querySelector('#switch');
@@ -76,12 +79,15 @@ let toggle = true;
 
 function switchImage() {
     toggle = !toggle;
+    emoji.classList.remove("animated");
     if(toggle == true) {
-        pic.src = 'starfire.png';
+        pic.src = 'robin2.png';
     }
     else { 
-        pic.src = 'blackfire.png';
+        pic.src = 'robin.png';
     }
 }
+
+const emoji= document.querySelector("#emoji");
 
 
